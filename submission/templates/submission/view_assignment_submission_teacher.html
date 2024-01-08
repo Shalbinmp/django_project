@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>submission</title>
+</head>
+<body>
+ <center>
+ 	<table border="5" class="table table-striped">
+ 		<tr>
+ 			<th style="color: white">student_name</th>
+ 			<th style="color: white">assignment_topic</th>
+ 			<th style="color: white">subject</th>
+ 			<th style="color: white">submission_date</th>
+ 			<th style="color: white">submitted date</th>
+            <th style="color: white">Assignment</th>
+ 		</tr>
+        {% for i  in a %}
+ 		<tr>
+ 			<td style="color: white">{{ i.student.student_name}}</td>
+ 			<td style="color: white">{{ i.assignment.assignment }}</td>
+            <td style="color: white">{{ i.assignment.subject}}</td>
+            <td style="color: white">{{ i.assignment.submission_date }}</td>
+            <td style="color: white">{{ i.date }}</td>
+            <td style="color: white">{{ i.file }}</td>
+
+{#            <td><button value="view">View</button></td>#}
+
+
+ 		</tr>
+        {% endfor %}
+ 	</table>
+ </center>
+
+</body>
+</html>

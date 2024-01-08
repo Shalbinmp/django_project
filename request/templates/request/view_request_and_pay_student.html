@@ -1,0 +1,36 @@
+{% extends 'temp/student.html' %}
+{% block base1 %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>request and pay</title>
+</head>
+<body>
+	<center>
+		<h2 style="color: orangered">REQUEST AND PAY</h2>
+		<table border="5" class="table table-striped">
+			<tr>
+				<th style="color: white">Teacher Name</th>
+				<th style="color: white">subject</th>
+				<th style="color: white">course</th>
+				<th style="color: white">Status</th>
+				<th style="color: white">Amount</th>
+			</tr>
+            {% for i in b %}
+			<tr>
+				<td style="color: white">{{ i.teacher.teacher_name}}</td>
+				<td style="color: white">{{i.teacher.course}}</td>
+				<td style="color: white">{{i.teacher.course }}</td>
+				<td style="color: white">{{ i.status }}</td>
+                <td style="color: white">1000</td>
+				<td><a href="/payment/payment/{{ i.teacher_id }}" class="btn btn-primary">Pay</a></td>
+			</tr>
+            {% endfor %}
+		</table>
+	</center>
+
+</body>
+</html>
+{% endblock %}

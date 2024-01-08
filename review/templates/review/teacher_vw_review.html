@@ -1,0 +1,26 @@
+{% extends 'temp/teacher.html' %}
+{% block base1 %}
+
+<html>
+	<head><title>view_review</title></head>
+	<body>
+		<center>
+			<h2 style="color: orangered"> REVIEWS</h2>
+			<table border="1" class="table table-striped">
+				<tr>
+					<th style="color: white">Student name</th>
+                    <th style="color: white">Teacher</th>
+					<th style="color:white;">Review</th>
+				</tr>
+                {% for i in a %}
+				<tr>
+					<td style="color: white">{{i.student.student_name }}</td>
+                    <td style="color: white">{{ i.teacher.teacher_name }}</td>
+					<td style="color: white">{{ i.review }}</td>
+				</tr>
+                {% endfor %}
+			</table>
+		</center>
+	</body>
+</html>
+{% endblock %}

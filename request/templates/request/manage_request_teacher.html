@@ -1,0 +1,38 @@
+{% extends 'temp/teacher.html' %}
+{% block base1 %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>manage request</title>
+</head>
+<body>
+	<center>
+		<h2>MANAGE REQUEST</h2>
+			<table border="1" class="table table-striped">
+				<tr>
+					<th style="color: white">student name</th>
+					<th style="color: white">phone</th>
+					<th style="color: white">email</th>
+					<th style="color: white">status</th>
+					<th colspan="2" style="color: white">action</th>
+				</tr>
+                {% for i in a %}
+				<tr>
+					<td style="color: white">{{ i.student.student_name }}</td>
+					<td style="color: white">{{ i.student.phone}}</td>
+					<td style="color: white">{{ i.student.email}}</td>
+					<td style="color: white">{{ i.status }}</td>
+					<td>
+                        <a href="/request/accept/{{ i.request_id }}" class="btn btn-primary">accept</a></td>
+				    <td><a href="/request/decline/{{ i.request_id }}" class="btn btn-primary">decline</a></td>
+				</tr>
+                {% endfor %}
+			</table>
+		</center>
+
+
+
+
+</body>
+</html>
+{% endblock %}

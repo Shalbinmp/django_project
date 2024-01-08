@@ -1,0 +1,69 @@
+{% extends 'temp/home.html' %}
+{% block base %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>student registration</title>
+</head>
+<body> 
+
+	<center>
+		<h1 style="color:orangered">STUDENT REGISTRATION</h1>
+		<form method="post">
+            {% csrf_token %}
+			<table>
+				<tr>
+					<td style="color: white">Name</td>
+					<td><input type="text" name="Sname" required pattern="[Aa-Zz]{15}" minlength="4" maxlength="15" class="form-control bg-transparent" style="color: white"></td>
+				</tr>
+				<tr>
+					<td style="color: white">Address</td>
+					<td><textarea rows="05" cols="15" name="address" required class="form-control bg-transparent" style="color: white"></textarea></td>
+				</tr>
+				<tr>
+					<td style="color: white">phone</td>
+					<td><input type="number" name="sphone" required pattern="[0-9]{10}" minlength="10" maxlength="10"class="form-control bg-transparent" style="color: white"></td>
+				</tr>
+				<tr>
+					<td style="color: white">Email</td>
+					<td><input type="Email" name="semail" required class="form-control bg-transparent" style="color: white"></td>
+				</tr>
+				<tr>
+					<td style="color: white">Gender</td><td>
+						Male<input type="radio" name="Gender" value="Male" checked>
+						Female<input type="radio" name="Gender" value="Female">
+						Other<input type="radio" name="Gender" value="Other">
+					</td>
+				</tr>
+				<tr>
+					<td style="color: white">Course</td>
+					<td><select id="Course" name="Course" required class="form-control bg-transparent" style="color: white">
+						<option value="Bsc">Bsc</option>
+						<option value="BCA">BCA</option>
+						<option value="BBA">BBA</option>
+						<option value="Bcom">Bcom</option>
+						<option value="fashion designing">fashion designing</option>
+					</select></td>
+              </tr>
+              <tr>
+              	<td style="color: white">Password</td>
+              	<td><input type="Password" id="Password" name="Password" required class="form-control bg-transparent" style="color: white"> </td>
+              </tr>
+              <tr>
+              	<td style="color: white">confirm pasword</td>
+              	<td><input type="password" id="confirm Password" name="confirm password" required class="form-control bg-transparent" style="color: white"></td>
+              </tr>
+              <tr>
+              	<td></td>
+              	<td><button value="submit" class="btn btn-primary">Submit</button></td>
+              </tr>
+			</table>
+			
+		</form>
+	</center>
+
+</body>
+</html>
+{% endblock %}

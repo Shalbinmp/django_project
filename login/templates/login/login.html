@@ -1,0 +1,63 @@
+{% extends 'temp/home.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+</head>
+<body>
+	<center>
+		<h1 style="color: orangered">LOGIN</h1>
+		<form method="post">
+            {% csrf_token %}
+			<table>
+				<tr>
+{#					<td style="color: white">username</td>#}
+					<td style="color: white"><input type="text" placeholder="Enter Username" name="username"class="form-control bg-transparent" style="color: white;border-radius: 20px;height: 60px"></td>
+				</tr>
+				<tr>
+{#					<td style="color: white">password</td>#}
+					<td style="color: white"><input type="password" placeholder="Enter Password" name="pass" class="form-control bg-transparent" style="color: white;border-radius: 20px;height: 60px"></td>
+				</tr>
+				<tr>
+{#                    <td></td>#}
+					<td><button value="submit" class="btn btn-outline-primary" style="height: 50px;width: 350px;border-radius: 20px">Login</button></td>
+				</tr>
+			</table>
+		</form>
+	</center>
+</body>
+</html>
+{% endblock %}
+
+
+
+{#<div class="col-lg-5">#}
+{#                    <div class="card border-0">#}
+{#                        <div class="card-header bg-light text-center p-4">#}
+{#                            <h1 class="m-0">Sign Up Now</h1>#}
+{#                        </div>#}
+{#                        <div class="card-body rounded-bottom bg-primary p-5">#}
+{#                            <form>#}
+{#                                <div class="form-group">#}
+{#                                    <input type="text" class="form-control border-0 p-4" placeholder="Your name" required="required" />#}
+{#                                </div>#}
+{#                                <div class="form-group">#}
+{#                                    <input type="email" class="form-control border-0 p-4" placeholder="Your email" required="required" />#}
+{#                                </div>#}
+{#                                <div class="form-group">#}
+{#                                    <select class="custom-select border-0 px-4" style="height: 47px;">#}
+{#                                        <option selected>Select a course</option>#}
+{#                                        <option value="1">Course 1</option>#}
+{#                                        <option value="2">Course 1</option>#}
+{#                                        <option value="3">Course 1</option>#}
+{#                                    </select>#}
+{#                                </div>#}
+{#                                <div>#}
+{#                                    <button class="btn btn-dark btn-block border-0 py-3" type="submit">Sign Up Now</button>#}
+{#                                </div>#}
+{#                            </form>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}

@@ -1,0 +1,38 @@
+{% extends 'temp/student.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>submit assignment</title>
+</head>
+<body>
+		<center><form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+		<table>
+	<tr>
+		<td style="color: white">Submit Assignment</td>
+		<td style="color: white"><input type="file" name="Subject" required class="form-control bg-transparent" style="color: white"></td>
+	</tr>
+{#	<tr>#}
+{#		<td>Type</td>#}
+{#		<td><select id="Type" name="Type">#}
+{#			<option value="Microsoft word Document">Word Document</option>#}
+{#			<option value="PDF">PDF</option>#}
+{#			<option value="PPT">PPT</option>#}
+{#			<option value="LaTeX Document">LaTeX</option>#}
+{#			<option value="Apple pages Document">Apple Document</option>#}
+{#		</select></td>#}
+{#	</tr>#}
+{#	<tr>#}
+{#		<td>Study Material</td>#}
+{#		<td><input type="file" name="file"></td>#}
+{#	</tr>#}
+	<tr><td> </td>
+		<td><button value="submit" class="btm btn-primary">submit</button></td>
+    </tr>
+</table>
+</form>
+</center>
+</body>
+</html>
+{% endblock %}

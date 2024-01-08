@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>request</title>
+</head>
+<body>
+	<form method="post">
+        {% csrf_token %}
+		<center>
+			<table>
+				<tr>
+					<td>Teacher</td>
+					<td><input type="text" name="teacher" value="{{ a.teacher_name }}" required style="color: black" class="form-control"></td>
+				</tr>
+				<tr>
+					<td>Request</td>
+					<td><input type="text" name="request" required style="color: black" class="form-control"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><button value="request" class="btn btn-primary">request</button></td>
+				</tr>
+			</table>
+		</center>
+	</form>
+
+</body>
+</html>

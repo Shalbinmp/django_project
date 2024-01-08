@@ -1,0 +1,35 @@
+{% extends 'temp/student.html' %}
+{% block base1 %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>doubt and reply</title>
+</head>
+<body>
+	<center>
+		<h2 style="color: orangered">REPLIES</h2>
+		<table border="5" class="table table-striped">
+			<tr>
+				<th style="color: white">student name</th>
+{#				<th>Subject</th>#}
+				<th style="color: white">doubt</th>
+				<th style="color: white">reply</th>
+{#				<th>Action</th>#}
+			</tr>
+            {% for i in a %}
+			<tr>
+				<td style="color: white">{{ i.student.student_name }}</td>
+{#				<td>{{ i.teacher.course }}</td>#}
+				<td style="color: white">{{ i.doubt }}</td>
+				<td style="color: white">{{ i.doubt_reply }}</td>
+{#				<td><a href="/doubt/doubt_reply/{{ i.doubt_id }}">Reply</a></td>#}
+			</tr>
+            {% endfor %}
+		</table>
+	</center>
+
+</body>
+</html>
+{% endblock %}

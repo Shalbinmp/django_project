@@ -1,0 +1,34 @@
+{% extends 'temp/Admin.html' %}
+{% block base1 %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>view_assignments</title>
+</head>
+<body>
+	<center>
+		<h2 style="color: orangered">TEACHER ADDED ASSIGNMENT</h2>
+			<table border="1"class="table table-striped">
+				<tr>
+					<th style="color: orange">teacher name</th>
+					<th style="color: orange">subject</th>
+					<th style="color: orange">topic</th>
+					<th style="color: orange">submission_date</th>
+				</tr>
+                {% for i in a %}
+				<tr>
+					<td style="color: white">{{ i.teacher.teacher_name }}</td>
+					<td style="color: white">{{ i.subject }}</td>
+					<td style="color: white">{{ i.assignment }}</td>
+					<td style="color: white">{{ i.submission_date }}</td>
+				</tr>
+                {% endfor %}
+			</table>
+		</center>
+
+
+</body>
+</html>
+{% endblock %}

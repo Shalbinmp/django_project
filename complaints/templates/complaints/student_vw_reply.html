@@ -1,0 +1,38 @@
+{% extends 'temp/student.html' %}
+{% block base1 %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>view complaint&post reply</title>
+</head>
+<body>
+	<center>
+		<h2>COMPLAINT AND REPLY</h2>
+			<table border="5" class="table table-striped">
+				<tr>
+					<th style="color: white">Student name</th>
+					<th style="color: white">teacher name</th>
+					<th style="color: white">subject</th>
+					<th style="color: white">complaint</th>
+					<th style="color: white">reply</th>
+
+				</tr>
+                {% for i in a %}
+				<tr>
+					<td style="color: white">{{ i.student.student_name }}</td>
+					<td style="color: white">{{ i.teacher.teacher_name }}</td>
+					<td style="color: white">{{ i.subject }}</td>
+					<td style="color: white">{{ i.complaints }}</td>
+					<td style="color: white">{{ i.reply }}</td>
+{#					<td><a href="/complaints/add_reply/{{ i.complaint_id }}" >reply</a></td>#}
+
+				</tr>
+                {% endfor %}
+			</table>
+		</center>
+
+</body>
+</html>
+{% endblock %}

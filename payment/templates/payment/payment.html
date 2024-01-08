@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>payment</title>
+</head>
+<body>
+	<center><form method="post">
+           {% csrf_token %}
+		<table>
+	<tr>
+				<td style="color: white">Method</td>
+				<td><select id="method" name="payment" required class="form-control">
+					<option value="credit/debit car">credit/debit card</option>
+					<option value="bank transfe">bank transfer</option>
+					<option value="upi">upi</option>
+					<option value="cryptocurrency">cryptocurrency</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Amount</td>
+				<td><input type="text" name="amount" value="100" placeholder="100" required class="form-control bg-transparent" style="color: white"></td>
+			</tr>
+            
+			<tr><td> </td>
+		<td><button value="submit" class="btn btn-outline-primary">submit</button></td>
+    </tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends 'temp/Admin.html' %}
+{% block base1 %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>view_videos</title>
+</head>
+<body>
+	<center>
+		<h2 style="color: orangered">TEACHER ADDED VIDEOS</h2>
+			<table border="1" class="table table-striped">
+				<tr>
+					<th style="color: white">teacher name</th>
+					<th style="color: white">subject</th>
+					<th style="color: white">type</th>
+					<th style="color: white">video</th>
+				</tr>
+                {% for i in a %}
+				<tr>
+					<td style="color: white">{{ i.teacher.teacher_name }}</td>
+					<td style="color: white">{{ i.subject }}</td>
+					<td style="color: black">{{ i.type }}</td>
+                    <td><a href="/static/{{ i.video }}"><video controls="controls" width="200px" height="200px"><source src="/static/{{ i.video }}"type="video/mp4"></video></a></td>
+				</tr>
+                {% endfor %}
+			</table>
+		</center>
+
+</body>
+</html>
+{% endblock %}

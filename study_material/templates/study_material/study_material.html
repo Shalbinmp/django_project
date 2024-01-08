@@ -1,0 +1,40 @@
+{% extends 'temp/teacher.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Study material</title>
+</head>
+<body>
+	<center>
+		<h2 style="color: orangered">ADD STUDY MATERIAL</h2>
+		<form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+		<table>
+	<tr>
+		<td>Subject</td>
+		<td><input type="text" name="Subject" required class="form-control bg-transparent" style="color: white"></td>
+	</tr>
+	<tr>
+		<td>Type</td>
+		<td><select id="Type" name="Type" required class="form-control bg-transparent" style="color: white">
+			<option value="Microsoft word Document">Word Document</option>
+			<option value="PDF">PDF</option>
+			<option value="PPT">PPT</option>
+			<option value="LaTeX Document">LaTeX</option>
+			<option value="Apple pages Document">Apple Document</option>
+		</select></td>
+	</tr>
+	<tr>
+		<td>Study Material</td>
+		<td><input type="file" name="std" required class="form-control bg-transparent" style="color: white"></td>
+	</tr>
+	<tr><td> </td>
+		<td><button value="submit" class="btn btn-primary">submit</button></td>
+    </tr>
+</table>
+</form>
+</center>
+</body>
+</html>
+{% endblock %}

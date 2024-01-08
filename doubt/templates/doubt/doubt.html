@@ -1,0 +1,36 @@
+{% extends 'temp/student.html' %}
+{% block base%}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>doubt
+	</title>
+</head>
+<body>
+	<center>
+		<h2 style="color: orangered">ADD DOUBT</h2>
+		<form method="post">
+        {% csrf_token %}
+		<table>
+            <td style="color: white">Teacher</td>
+            <td><select name="tn" class="form-control">
+                <option style="color: black" >----SELECT----</option>
+                {% for i in a %}
+                <option value="{{ i.teacher_id}}" style="color: black">{{ i.teacher_name }}</option>
+                {% endfor %}
+            </select></td>
+	<tr>
+		<td style="color: white">Doubt</td>
+		<td><textarea rows="05" cols="20" name="doubt" required style="color: white" class="form-control bg-transparent"></textarea> </td>
+    </tr>
+    <tr><td> </td>
+		<td><button value="submit" class="btn btn-outline-primary">submit</button></td>
+    </tr>
+
+</table>
+</form>
+</body>
+</html>
+{% endblock %}

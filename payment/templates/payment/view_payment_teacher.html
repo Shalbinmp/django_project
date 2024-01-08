@@ -1,0 +1,38 @@
+{% extends 'temp/teacher.html' %}
+{% block base1 %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>payment</title>
+</head>
+<body>
+	<center>
+		<h2 style="color: orangered">PAYMENT </h2>
+		<table border="5" class="table table-striped">
+			<tr>
+				<th style="color: white">payment</th>
+				<th style="color: white">date</th>
+				<th style="color: white">Student_Name</th>
+				<th style="color: white">Teacher_name</th>
+				<th style="color: white">Subject</th>
+				<th style="color: white">Status</th>
+            </tr>
+            {% for i in a %}
+			<tr>
+				<td style="color: white">{{ i.payment }}</td>
+				<td style="color: white">{{ i.date }}</td>
+				<td style="color: white">{{ i.student.student_name }}</td>
+				<td style="color: white">{{ i.teacher.teacher_name}}</td>
+				<td style="color: white">{{ i.teacher.course }}</td>
+				<td style="color: yellowgreen">{{ i.status }}</td>
+				
+			</tr>
+            {% endfor %}
+		</table>
+	</center>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'temp/teacher.html' %}
+{% block base %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>video</title>
+</head>
+<body>
+	<center>
+		<h2 style="color: orangered">ADD VIDEOS</h2>
+		<form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+		<table>
+	<tr>
+		<td style="color: white">Subject</td>
+		<td><input type="text" name="Subject" required class="form-control bg-transparent" style="color: white"></td>
+	</tr>
+	<tr>
+		<td style="color: white">Type</td>
+		<td><select id="Type" name="Type" required class="form-control bg-transparent" style="color: white">
+			<option value="AVI" style="color: black">AVI</option>
+			<option value="MOV" style="color: black">MOV</option>
+			<option value="MP4" style="color: black">MP4</option>
+			<option value="webM" style="color: black">webM</option>
+			<option value="FLV" style="color: black">FLV</option>
+
+		</select></td>
+	</tr>
+	<tr>
+		<td style="color: white">video</td>
+		<td><input type="file" name="file" required class="form-control bg-transparent" style="color: white"></td>
+	</tr>
+	<tr><td> </td>
+		<td><button value="submit" class="btn btn-primary">submit</button></td>
+    </tr>
+</table>
+</form>
+</center>
+</body>
+</html>
+{% endblock %}

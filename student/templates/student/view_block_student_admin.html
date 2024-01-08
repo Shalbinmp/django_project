@@ -1,0 +1,36 @@
+{% extends 'temp/Admin.html' %}
+{% block base1 %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>block student</title>
+</head>
+<body>
+	<center>
+		<h2>BLOCK STUDENT</h2>
+		<table border="5" class="table table-striped">
+			<tr>
+				<th style="color: white">Name</th>
+				<th style="color: white">Course</th>
+				<th style="color: white">phone</th>
+				<th style="color: white">Email</th>
+                <th style="color: white">status</th>
+				<th style="color: white"></th>
+			</tr>
+             {% for i in a %}
+			<tr>
+				<td style="color: white">{{ i.student_name }}</td>
+				<td style="color: white">{{ i.course }}</td>
+				<td style="color: white">{{ i.phone }}</td>
+				<td style="color: white">{{ i.email }}</td>
+                <th style="color: white">{{ i.status }}</th>
+				<td style="color: white"><a href="/student/block/{{ i.student_id }}" class="btn btn-primary">Block</a></td>
+			</tr>
+            {% endfor %}
+		</table>
+	</center>
+
+</body>
+</html>
+{% endblock %}

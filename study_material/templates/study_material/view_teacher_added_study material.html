@@ -1,0 +1,32 @@
+{% extends 'temp/Admin.html' %}
+{% block base1 %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>view_study material</title>
+</head>
+<body>
+	<center>
+		<h2 style="color: orangered">TEACHER ADDED STUDY MATERIAL</h2>
+			<table border="5">
+				<tr>
+					<th style="color: white">Teacher name</th>
+					<th style="color: white">Subject</th>
+					<th style="color: white">Type</th>
+					<th style="color: white">Study material</th>
+				</tr>
+                {% for i in b %}
+				<tr>
+					<td style="color: white">{{ i.teacher.teacher_name}}</td>
+					<td style="color: white">{{ i.subject }}</td>
+					<td style="color: white">{{ i.type }}</td>
+				<td style="color: white"><a href="/static/{{ i.study_material }}"><img src="/static/{{ i.study_material }}"></a> </td>
+				</tr>
+                {% endfor %}
+			</table>
+		</center>
+
+</body>
+</html>
+{% endblock %}
